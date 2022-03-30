@@ -1,0 +1,49 @@
+account_id: ""
+actions:
+  habicbogdan/workshop-test1:
+    runtime: v1
+    sources: actions
+    specs:
+      gameStart:
+        description: This is just an example, but you can publish this action.
+        function: exampleStart:gameStartFn
+        trigger:
+          type: transaction
+          transaction:
+            status: 
+              - mined
+            filters:
+              - network: 100
+                eventEmitted:
+                  contract:
+                    address: 0x5e15A2399f415E66b333177482df6260335527b3
+                  name: GameCreated
+      gameJoin:
+        description: This is just an example, but you can publish this action.
+        function: exampleJoin:gameJoin
+        trigger:
+          type: transaction
+          transaction:
+            status: 
+              - mined
+            filters:
+              - network: 100
+                eventEmitted:
+                  contract:
+                    address: 0x5e15A2399f415E66b333177482df6260335527b3
+                  name: PlayerJoinedGame
+      gameMove:
+        description: This is just an example, but you can publish this action.
+        function: exampleMove:gameMove
+        trigger:
+          type: transaction
+          transaction:
+            status: 
+              - mined
+            filters:
+              - network: 100
+                eventEmitted:
+                  contract:
+                    address: 0x5e15A2399f415E66b333177482df6260335527b3
+                  name: PlayerMadeMove
+project_slug: ""
