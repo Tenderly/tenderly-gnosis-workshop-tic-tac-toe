@@ -1,6 +1,6 @@
 account_id: ""
 actions:
-  habicbogdan/workshop-test1:
+  habicbogdan/gnosis-workshop:
     runtime: v1
     sources: actions
     specs:
