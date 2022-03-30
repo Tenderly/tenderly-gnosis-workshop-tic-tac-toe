@@ -1,0 +1,147 @@
+{
+    "abi": [
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "gameId",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "creator",
+					"type": "address"
+				}
+			],
+			"name": "GameCreated",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "gameId",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "enum TicTacToe.Winners",
+					"name": "winner",
+					"type": "uint8"
+				}
+			],
+			"name": "GameOver",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "gameId",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "player",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint8",
+					"name": "playerNumber",
+					"type": "uint8"
+				}
+			],
+			"name": "PlayerJoinedGame",
+			"type": "event"
+		},
+		{
+			"anonymous": false,
+			"inputs": [
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "gameId",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "address",
+					"name": "player",
+					"type": "address"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "xCoordinate",
+					"type": "uint256"
+				},
+				{
+					"indexed": false,
+					"internalType": "uint256",
+					"name": "yCoordinate",
+					"type": "uint256"
+				}
+			],
+			"name": "PlayerMadeMove",
+			"type": "event"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_gameId",
+					"type": "uint256"
+				}
+			],
+			"name": "joinGame",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [
+				{
+					"internalType": "uint256",
+					"name": "_gameId",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_xCoordinate",
+					"type": "uint256"
+				},
+				{
+					"internalType": "uint256",
+					"name": "_yCoordinate",
+					"type": "uint256"
+				}
+			],
+			"name": "makeMove",
+			"outputs": [],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		},
+		{
+			"inputs": [],
+			"name": "newGame",
+			"outputs": [
+				{
+					"internalType": "uint256",
+					"name": "gameId",
+					"type": "uint256"
+				}
+			],
+			"stateMutability": "nonpayable",
+			"type": "function"
+		}
+	]
+}
